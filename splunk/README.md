@@ -1,4 +1,4 @@
-# 🔍 Splunk - AI + SOAR Implementation
+# Splunk - AI + SOAR Implementation
 
 ## Overview
 This module demonstrates AI-based threat detection and automated response using Splunk.
