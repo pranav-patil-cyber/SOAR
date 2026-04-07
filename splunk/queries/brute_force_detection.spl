@@ -1,1 +1,4 @@
+index=botsv3 source IN ("WinEventLog:Security") EventCode IN (4624)
 
+| stats count as failed_attempts by Account_Name
+| where failed_attempts > 10
