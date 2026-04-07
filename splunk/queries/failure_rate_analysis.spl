@@ -1,1 +1,4 @@
-
+index=botsv3 source IN ("WinEventLog:Security") EventCode IN (4624, 4625)
+| stats count(eval(EventCode=4624)) as failures, count(eval (EventCode=4625)) as successes by ComputerName
+| eval total_attempts = failures + successes
+| eval failure_rate = round((failures / total_attempts) *100, 2)
